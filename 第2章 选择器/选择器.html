@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择器</title>
+	<style type="text/css">
+	/* 1.元素选择器 */
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid;
+			margin: auto;
+		}
+	/* 2.通配选择器 */
+	*{margin: 0;padding: 0}
+	/*3.类选择器 多类选择器*/
+	.class1{background: red;}
+	.class1.class2{color: yellow;}
+	/* 4.ID选择器 */
+	#div1{border:1px solid green;}
+	/*5.属性选择器*/
+	/* ①简单属性选择 */
+	a[href]{text-decoration: none;}
+	a[href][title]{color: red;}
+	/*②根据具体的属性值选择*/
+	a[href='123']{font-size: 30px;}
+	a[href='123'][title="baidu"]{font-size: 50px;}
+	/* ③根据部分属性值选择 */
+	p[class~='123']{color: red};
+	/* ④特定属性选择类型 (无效)*/
+	*[title|='en']{color:green;}
+	/* 6.后代选择器 */
+	#houdai{
+		width: 560px;
+		height: 200px;
+		background: red;
+	}
+	#houdai p{
+		color: yellow;
+	}
+	/* ①选择子元素 */
+	#houdai p > em{
+		font-size: 30px;
+	}
+	/* ②选择相邻兄弟元素 */
+	#houdai p + p {
+		color: green;
+	}
+	/* 7.伪类选择器 */
+	/* ①静态伪类 只能用于href */
+	#weilei{
+		width: 250px;
+		height: 200px;
+	}
+	#weilei a:link{color: red;}
+	#weilei a:visited{color: green;}
+	/* ②动态伪类 */
+	#weilei input:focus{background: silver;}
+	#weilei button:hover{background: red;}
+	#weilei button:active{background: black;}
+	/* ③选择第一个子元素 */
+	#weilei ul li:first-child{color: red;}
+	/* 8.伪元素选择器 */
+	#weiyuansu{
+		width: 300px;
+		height: 200px;
+	}
+	#weiyuansu p:first-letter{font-size: 30px;}
+	#weiyuansu p:first-line{color: red;}
+	#weiyuansu p:before{content: '我是新加到前面的文字';}
+	#weiyuansu p:after{content: '我是新加到后面的文字';color: green;}
+	</style>
+</head>
+<body>
+<div>元素选择器</div>
+<div class="class1">类选择器</div>
+<div class="class1 class2">多类选择器</div>
+<div id="div1">ID选择器</div>
+<a href="www.baidu.com">简单属性选择</a>
+<a href="www.baidu.com" title="baidu">多个简单属性选择</a>
+<a href="123">根据具体的属性值选择</a>
+<a href="123" title="baidu">根据多个具体的属性值选择</a>
+<p class="123">根据部分属性值选择</p>
+<p class="123 321">根据部分属性值选择</p>
+<p class="321">根据部分属性值选择</p>
+<span title="en">特定属性选择类型</span>
+<span title="en1">特定属性选择类型</span>
+<span title="1en">特定属性选择类型</span>
+<div id="houdai">后代选择器
+	<p>我是子元素1
+		<em>我是子元素1的em子元素</em>
+	</p>
+	<p>我是子元素2 我是子元素1的相邻兄弟元素
+		<strong>我是子元素2的strong子元素</strong>
+	</p>
+	<p>我是子元素3
+	</p>
+</div>
+<div id="weilei">伪类选择器
+	<a href="#">百度链接</a>
+	<input type="text">
+	<button>提交</button>
+	<ul>
+		<li>第一个子元素</li>
+		<li>第二个子元素</li>
+		<li>第三个子元素</li>
+	</ul>
+</div>
+<div id="weiyuansu">
+	<p>近日，云南省文山市政府发布“关于加强文山市区犬类管理的通告”。此次文山养犬新规中最引人注意的条款是，携犬出户时，犬只必须使用束犬链，犬链长度不得超过1米，并由成年人牵引。早上7点至晚上10点禁止溜犬。</p>
+</div>
+</body>
+</html>
