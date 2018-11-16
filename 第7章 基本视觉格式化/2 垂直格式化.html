@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>垂直格式化</title>
+	<style type="text/css">
+	/* 1.指定高度大于显示内容高度 */
+	#div1{height: 100px;background: red;}
+	/* 2.指定高度小于显示内容高度 由overflow属性的值决定显示样式 */
+	#div2{width:100px;height: 200px;}
+	/* 3.margin-top或margin-bottom设为auto，则计算为0，使得不能垂直居中 */
+	#div3{width: 500px;margin-top: 100px;}
+	#div3 p {margin:auto 0;}
+	</style>
+</head>
+<body>
+	<div id="div1">指定高度大于显示内容所高度</div>
+	<div id="div2">指定高度小于显示内容高度指定高度小于显示内容高度指定高度小于显示内容高度指定高度小于显示内容高度指定高度小于显示内容高度指</div>
+	<div id="div3"><p>margin-top或margin-bottom设为auto，则计算为0，使得不能垂直居中</p></div>
+</body>
+</html>

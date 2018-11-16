@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>外边距</title>
+	<style type="text/css">
+	/* 1.外边距可以看到父元素的背景 */
+	#div1{width: 200px;height: 200px;background: red;}
+	#div1 p {margin: 10px;background: green;}
+	/* 2.长度值和外边距 */
+	#div2{width: 100px;height: 100px;background: yellow;margin: 20px 10px 20px 30px;}
+	/* 3.百分数和外边距 */
+	#div3{width: 100px;height: 100px;background: red;}
+	#div3 p{margin: 10%;}
+	/* 4.没有声明width，总宽度取决于父元素的width的流式页面 */
+	#div4{}
+	/* 5.值复制 */
+	/* 缺左复制右 缺下复制上 缺右复制上 */
+	#div5{
+		margin: 5px;width: 100px;height: 100px;background: green;
+	}
+	/* 6.单边外边距属性 */
+	#div6{
+		margin-top: 10px;
+		margin-right: 20px;
+		margin-bottom: 30px;
+		margin-left: 0;
+		background: gray;
+		width: 100px;
+		height: 100px;
+	}
+	/* 7.正常流中垂直相邻外边距会合并 */
+	/* 8.负外边距 */
+	#div8{
+		width: 200px;
+		height: 200px;
+		border: 1px dotted gray;margin: 10px;
+	}
+	#div8 p{margin: 10px;border: 1px dashed silver;}
+	#div8 p.one{margin: 0 -10px; }
+	#div8 p.two{margin: -10px 0;}
+	/* 9.行内费非替换元素的行高不受外边距影响 */
+	#p9 span{margin: 10px;}
+	/* 10.替换元素的外边距影响行高 */
+	#p10 img{
+		width: 40px;
+		margin: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<p>外边距可以看到父元素的背景</p>
+	</div>
+	<div id="div2"></div>
+	<div id="div3">
+		<p>百分数和外边距</p>
+	</div>
+	<div id="div4">
+			流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面流式页面
+	</div>
+	<div id="div5"></div>
+	<div id="div6"></div>
+	<div id="div8">
+		<p>负外边距段落</p>
+		<p class="one">负外边距段落1</p>
+		<p class="two">负外边距段落2</p>
+	</div>
+	<p id="p9">
+		12345<span>行内非替换元素不受外边距影响</span>6789
+	</p>
+	<p id="p10">
+		12345<img src="1.jpg">6789
+	</p>
+</body>
+</html>

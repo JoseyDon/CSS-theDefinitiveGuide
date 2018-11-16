@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>绝对定位</title>
+	<style type="text/css">
+		#contain{width: 300px;height: 300px;background: red;border: 1px solid black;position: relative;}
+		#contain #one{width: 200px;height: 200px;background: green;border: 1px solid black;position: absolute;bottom: 0;left: 0;}
+		#contain #two{width: 100px;height: 100px;background: yellow;border: 1px solid black;position: absolute;bottom: 0;left: 0;}
+
+		#div1{width: 800px;border: 1px solid red;position: relative;}
+		#div1 span{position: absolute;top: auto;}
+
+		#div2{width: 800px;border: 1px solid red;position: relative;}
+		#div2 span{position: absolute;margin: 0 auto;top: 0;left: 1em;right: 1em;width: 10em;background: red;}
+
+		#div3{width: 800px;height:100px;border: 1px solid red;position: relative;margin: 10px;}
+		#div3 span{position: absolute;margin: auto 0;top: 0;bottom: 0;height: 5em;background: red;}
+
+		#div4{position: relative;}
+		#div4 div{position: absolute;}
+		#div4 .one{z-index: 10;width: 100px;height: 100px;background: red;}
+		#div4 .two{z-index: 1;width: 150px;height: 150px;background: green;}
+	</style>
+</head>
+<body>
+	<div id="contain">
+		<div id="one">
+			<div id="two"></div>
+		</div>
+	</div>
+
+	<div id="div1">
+	 设置除bottom外某个任意偏移属性设置为auto，则相对于其未定位时<span>本来的位置</span>对齐。
+	</div>
+
+	<div id="div2">假设左右外边距都设置为<span>我是绝对定位元素</span>auto，而left、right、width不是auto，左右外边距会设置为相等的值。水平居中</div>
+
+	<div id="div3">假设上下外边距都设置为<span>我是绝对定位元素</span>auto，而top、heigiht不是auto，上下外边距会设置为相等的值。垂直居中</div>
+
+	<div id="div4">
+		<div class="one">我在上面</div>
+		<div class="two">我在下面</div>
+	</div>
+</body>
+</html>

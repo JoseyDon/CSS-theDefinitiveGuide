@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>背景</title>
+	<style type="text/css">
+	div{margin-bottom: 20px;width: 500px;height: 200px;}
+	/* 1.background-color */
+	#div1{background-color: red;}
+	#div1 div{width: 200px;height: 100px;background-color: transparent;border: 1px solid black;}
+	/* 2.background-image */
+	#div2{background-image:url('1.jpg');background-color: red;}
+	/* 3.background-repeat */
+	#div3{background-image:url('1.jpg');background-color: red;background-repeat: repeat;}
+	#div4{background-image:url('1.jpg');background-color: red;background-repeat: repeat-x;}
+	#div5{background-image:url('1.jpg');background-color: red;background-repeat: repeat-y;}
+	/* 4.background-position */
+	/* 关键字  */
+	#div6{background-image:url('1.jpg');background-color: red;background-position: center;background-repeat: no-repeat;}
+	#div7{background-image:url('1.jpg');background-color: red;background-position: top;background-repeat: no-repeat;}
+	#div8{background-image:url('1.jpg');background-color: red;background-position: bottom;background-repeat: no-repeat;}
+	#div9{background-image:url('1.jpg');background-color: red;background-position: right;background-repeat: no-repeat;}
+	#div10{background-image:url('1.jpg');background-color: red;background-position: left;background-repeat: no-repeat;}
+	#div11{background-image:url('1.jpg');background-color: red;background-position: top right;background-repeat: no-repeat;}
+	/* 百分数 */
+	#div12{background-image:url('1.jpg');background-color: red;background-position: 0% 0%;background-repeat: no-repeat;}
+	#div13{background-image:url('1.jpg');background-color: red;background-position: 50% 50%;background-repeat: no-repeat;}
+	#div14{background-image:url('1.jpg');background-color: red;background-position: 100% 100%;background-repeat: no-repeat;}
+	#div15{background-image:url('1.jpg');background-color: red;background-position: 0 100%;background-repeat: no-repeat;}
+	#div16{background-image:url('1.jpg');background-color: red;background-position: 100% 0;background-repeat: no-repeat;}
+	/* 长度值 */
+	#div17{background-image:url('1.jpg');background-color: red;background-position: 10px 10px;background-repeat: no-repeat;}
+
+	/* 5.关联background-attachment */
+	body{background-image: url('1.jpg');background-attachment: fixed;}
+
+	/* 6.汇总 */
+	#div18{background:url('1.jpg')repeat-y;}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div></div>
+	</div>
+	<div id="div2">背景图像啊图</div>
+	<div id="div3">平铺</div>
+	<div id="div4">水平平铺</div>
+	<div id="div5">垂直平铺</div>
+
+	<div id="div6">center</div>
+	<div id="div7">top</div>
+	<div id="div8">bottom</div>
+	<div id="div9">right</div>
+	<div id="div10">left</div>
+	<div id="div11">top right</div>
+
+	<div id="div12">0% 0%</div>
+	<div id="div13">50% 50%</div>
+	<div id="div14">100% 100%</div>
+	<div id="div15">0 100%</div>
+	<div id="div16">100% 0</div>
+
+	<div id="div17">10px 10px</div>
+
+	<div id="div18">汇总</div>
+</body>
+</html>

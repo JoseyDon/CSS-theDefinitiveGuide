@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>内容溢出</title>
+	<style type="text/css">
+	#div1{width: 500px;}
+	#div1 div{float: right;width: 100px;height: 100px;background: red;border: 1px solid black;text-align: center;}
+	#div2{width: 500px;height: 200px;}
+	#div2 p{margin-bottom: 20px;}
+	#div2 div{float: right;width: 100px;height: 100px;background: red;border: 1px solid black;text-align: center;margin-top: 20px;}
+	#div3{width: 500px;height: 200px;background: red;padding: 10px;margin:10px;}
+	.left{float: left;width: 100px;height: 100px;background: white;border: 1px solid black;}
+	.right{float: right;width: 100px;height: 100px;background: white;border: 1px solid black;}
+	#div4{width: 300px;height: 300px;background: red;border: 1px solid black;}
+	#div5{width: 150px;height: 200px;background: red;border: 1px solid black;}
+	#div6{width: 200px;height: 50px;background: red;}
+	#div6 div{width: 100px;height: 100px;float: left;border: 1px solid black;}
+	#div7{width: 100%;height: 50px;background: red;float: left;}
+	#div7 div{width: 100px;height: 100px;float: left;border: 1px solid black;}
+	#div8{width: 200px;clear: both;margin-top: 200px;}
+	#div8 p{background: red;border: 1px solid black;}
+	#div8 strong{background: green;border: 1px solid black;}
+	#div8 img{float: left;margin: 10px -15px 10px 10px;}
+	</style>
+</head>
+<body>
+	<div id="div1">浮动元素自成一派，从正常流中删除，其他元素会环绕它。浮动元素自成一派，从正常流中删除，其他元素会环绕它。浮动元素自成一派，从正常流中删除，其他元素会环绕它。<div>我是浮动元素嘻嘻</div>浮动元素自成一派，从正常流中删除，其他元素会环绕它。浮动元素自成一派，从正常流中删除，其他元素会环绕它。浮动元素自成一派，从正常流中删除，其他元素会环绕它。</div>
+
+	<div id="div2"><p>浮动元素的外边距不会合并。浮动元素的外边距不会合并。浮动元素的外边距不会合并。浮动元素的外边距不会合并。浮动元素的外边距不会合并。</p><div>我是浮动元素哈哈</div></div>
+
+	<div id="div3"><div class="left">我是浮动元素</div><div class="right">我是浮动元素</div></div>
+	<div id="div4">
+		<div class="left">我是浮动元素</div>
+		<div class="left">我是浮动元素</div>
+		<div class="left">我是浮动元素</div>
+	</div>
+	<div id="div5">
+		<div class="left">我是浮动元素</div>
+		<div class="right">我是浮动元素</div>
+	</div>
+
+	<div id="div6">浮动元素比父元素高<div></div></div>
+	<div id="div7">浮动元素比父元素高-设置父元素也为浮动元素使得浮动元素包含在其父元素内<div></div></div>
+
+	<div id="div8">
+		<img src="1.jpg">
+		<p><strong>行内框</strong>块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素块级元素</p>
+	</div>
+</body>
+</html>
